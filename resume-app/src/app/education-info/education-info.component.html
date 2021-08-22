@@ -1,0 +1,36 @@
+<table class="table table-bordered bg-dark text-info">
+    <thead>
+        <tr>
+            <th>Degree</th>
+            <th>Year</th>
+            <th>Per</th>
+            <th>University</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let e of educationList">
+            <td>{{e.degree}}</td>
+            <td>{{e.year}}</td>
+            <td>{{e.per}}</td>
+            <td>{{e.university}}</td>
+        </tr>
+        <!-- <tr>
+            <td>{{educationList[0].degree}}</td>
+            <td>{{educationList[0].year}}</td>
+            <td>{{educationList[0].per}}</td>
+            <td>{{educationList[0].university}}</td>
+        </tr>
+        <tr>
+            <td>{{educationList[1].degree}}</td>
+            <td>{{educationList[1].year}}</td>
+            <td>{{educationList[1].per}}</td>
+            <td>{{educationList[1].university}}</td>
+        </tr>
+        <tr>
+            <td>{{educationList[2].degree}}</td>
+            <td>{{educationList[2].year}}</td>
+            <td>{{educationList[2].per}}</td>
+            <td>{{educationList[2].university}}</td>
+        </tr> -->
+    </tbody>
+</table>
