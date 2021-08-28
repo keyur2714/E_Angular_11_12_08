@@ -1,0 +1,32 @@
+<div class="row m-2">
+    <div class="col-sm-4">
+        Enter First Number : 
+    </div>
+    <div class="col-sm-4">
+        <input type="number" name=num1 class="form-control" #num1>
+    </div>
+</div>
+<div class="row m-2">
+    <div class="col-sm-4">
+        Enter Second Number : 
+    </div>
+    <div class="col-sm-4">
+        <input type="number" name=num2 class="form-control" #num2>
+    </div>
+</div>
+<div class="row m-2">
+    <div class="col-sm-6">
+        <button class="btn btn-info m-1" (click)="add(num1.value,num2.value)">+</button>
+        <button class="btn btn-success m-1" (click)="sub(num1.value,num2.value)">-</button>
+        <button class="btn btn-warning m-1" (click)="mul(num1.value,num2.value)">*</button>
+        <button class="btn btn-danger m-1" (click)="div(num1.value,num2.value)">/</button>        
+    </div>
+</div>
+<div class="row m-2">
+    <div class="col">
+        Result Is : {{result}}
+    </div>
+</div>
+
+<!-- ///#num1 is euqal to = document.getElementById("num1")
+num1. -->
