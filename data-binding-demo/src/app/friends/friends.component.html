@@ -1,0 +1,42 @@
+<div class="row m-1">
+    <div class="col-sm-3">
+        Enter Friend Name :
+    </div>    
+    <div class="col-sm-3">
+        <input type="text" name=friendName class="form-control" [(ngModel)]="friendName">
+         <!-- {{friendName}}  -->
+    </div> 
+    <div class="col-sm-3">
+        <button class="btn btn-info" (click)="addFriend()" *ngIf="! isUpdate">Add Friend</button>
+        <button class="btn btn-info" (click)="updateFriend()" *ngIf="isUpdate">Update Friend</button>
+    </div>
+</div>
+<div class="row m-1">
+    <div class="col">
+        <table class="table table-borderd bg-dark text-info">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let name of friendList;let i=index" [class.selected]="name === selectedFriend"  (click)="setSelectedFriend(name)">
+                    <td>
+                        <input type="radio" class="radio-inline" name=control #preCheck (click)="checkVal(i)">
+                        {{name}}
+                    </td>
+                    <td>                                                
+                        <button class="btn btn-success m-1" (click)="edit(i)" *ngIf="i===currentRow">Edit</button>
+                        <button class="btn btn-danger m-1" (click)="delete(i)" *ngIf="i===currentRow">Delete</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<div class="row m-1">
+    <div class="col">
+        Selected Friend name is : {{selectedFriend}}
+    </div>
+</div>
