@@ -1,0 +1,65 @@
+<div class="container">
+  <div class="row m-1">
+    <h1>
+      @Input Demo
+    </h1>
+  </div>
+  <div class="row m-1">
+    <div class="col-sm-6">
+      <app-personal-info></app-personal-info>
+    </div>
+    <div class="col-sm-6">
+      <app-personal-info
+        first-name="Denish"
+        last-name="Patel"
+        age=35
+        city="Mumbai"
+        mobile-no="9898121222"
+        email="denishjava26@gmail.com"
+        bg-color="warning"
+        text-color="black"        
+      >        
+      </app-personal-info>
+    </div>
+  </div>
+  <div class="row m-1">
+    <div class="col-sm-6">
+      <app-personal-info
+        [first-name]="person.firstName"
+        [last-name]="person.lastName"
+        [age]="person.age"
+        [city]="person.city"
+        [mobile-no]="person.mobileNo"
+        [email]="person.email"
+        bg-color="danger"
+        text-color="white"        
+      >        
+      </app-personal-info>
+    </div>
+  </div>
+  <div class="row m-1">
+    <div class="col">
+      <app-message></app-message>
+    </div>
+    <div class="col">
+      <app-message message="Hi" message-type="warning"></app-message>
+    </div>
+    <div class="col">
+      <app-message message="Hello" message-type="danger"></app-message>
+    </div>
+  </div>
+  <div class="row m-1">
+    <div class="col">
+      <app-message [message]="name"></app-message>
+    </div>
+  </div>
+  <div class="row m-1">
+    <div class="col-sm-4">
+      <ul>
+        <li *ngFor="let m of messageList">
+          <app-message [message]="m.message" [message-type]="m.messageType"></app-message>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

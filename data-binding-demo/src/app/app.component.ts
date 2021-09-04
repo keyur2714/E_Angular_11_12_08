@@ -7,4 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Data-Binding-Demo';
+
+  age : number = 19;
+
 }

@@ -5,4 +5,24 @@
     </div>
   </div>
   <app-friends></app-friends>
+
+  <div class="row m-1">
+    <div class="col">
+      <!-- <h1 *ngIf="age >= 18 then ifBlock;else elseBlock">
+      </h1>  -->
+      <ng-template #ifBlock [ngIf]="age >= 18">
+        <h1>
+          You are Eligible for Voting.
+        </h1>
+      </ng-template>
+      <ng-template #elseBlock [ngIf]="age < 18">
+        <h1>
+          You are Not Eligible for Voting.
+        </h1>
+      </ng-template>    
+    </div>
+  </div>
+
+  
 </div>
+
