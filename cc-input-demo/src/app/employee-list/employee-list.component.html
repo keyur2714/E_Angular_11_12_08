@@ -1,0 +1,36 @@
+<!-- <app-data-grid *ngFor="let master of masterList"
+    [header-list]="master.headerList"
+    [field-list]="master.fieldList"
+    [data-list]="master.dataList"
+    [bg-color]="master.bgColor"
+    [text-color]="master.textColor"
+>   
+</app-data-grid> -->
+<app-data-grid
+    [header-list]="headerList"
+    [field-list]="fieldList"
+    [data-list]="employeeList"
+    bg-color="success"
+    text-color="white"
+>
+</app-data-grid> 
+<!-- <table class="table table-bordered bg-dark text-info">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Dept</th>
+            <th>Designation</th>
+            <th>Salary</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let emp of employeeList">
+            <td>{{emp.id}}</td>
+            <td>{{emp.name}}</td>
+            <td>{{emp.dept}}</td>
+            <td>{{emp.designation}}</td>
+            <td>{{emp.salary}}</td>
+        </tr>
+    </tbody>
+</table> -->

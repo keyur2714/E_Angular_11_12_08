@@ -1,0 +1,18 @@
+<table class="table table-bordered bg-{{bgColor}} text-{{textColor}}">
+    <thead>
+        <tr>
+            <th *ngFor="let header of headerList">{{header}}</th>         
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let data of dataList">
+            <td *ngFor="let field of fieldList">
+                {{data[field]}}
+            </td>          
+            <td>
+                <button class="btn btn-danger" (click)="selectedRow(data['id'])">Edit</button>
+            </td>  
+        </tr>
+    </tbody>
+</table>
