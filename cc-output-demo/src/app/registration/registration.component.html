@@ -1,0 +1,47 @@
+<div class="row m-1">    
+    <div class="col">
+        <app-my-dropdown 
+            name="country"
+            label="Select Country"
+            [data-list]="countryList"
+            [selected-item]="selectedCountry"
+            (getSelectedItem)="getSelectedCountry($event)"
+        >
+        Select Country : 
+        </app-my-dropdown>
+        <!-- <select name="country" class="form-control" [(ngModel)]="selectedCountry">
+            <option value="-1">-:Select Country:-</option>
+            <option *ngFor="let country of countryList" [ngValue]="country">                
+                {{country.name}}       
+            </option>
+        </select> -->
+    </div>
+</div>
+<div class="row m-1">    
+    <div class="col">
+        <app-my-dropdown 
+            name="state"
+            label="Select State"
+            [data-list]="stateList"
+            [selected-item]="selectedState"
+            (getSelectedItem)="getSelectedState($event)"
+        >
+        Select State : 
+        </app-my-dropdown>
+        <!-- <select name="state" class="form-control" [(ngModel)]="selectedState">
+            <option value="-1">-:Select State:-</option>
+            <option *ngFor="let state of stateList" [ngValue]="state">                
+                {{state.name}}       
+            </option>
+        </select> -->
+    </div>
+</div>
+
+<div class="row m-1">
+    <div class="col">
+        Selected Country : {{selectedCountry.name}}
+    </div>
+    <div class="col">
+        Selected State : {{selectedState.name}}
+    </div>
+</div>

@@ -12,8 +12,8 @@ class CourseDTO {
 })
 export class CourseListComponent implements OnInit {
 
-  headerList : string[] = ["Id","Course Code","Course Name","Fees"];
-  fieldList : string[] = ["id","courseCode","courseName","fees"];
+  headerList : string[] = ["Id","Course Name","Fees"];
+  fieldList : string[] = ["id","courseName","fees"];
   //courseList : Course[] = [];
   courseList : CourseDTO[] = [];
 
