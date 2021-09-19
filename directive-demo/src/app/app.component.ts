@@ -10,6 +10,10 @@ export class AppComponent implements OnInit,AfterViewInit,OnDestroy{
   border : string = '10px solid red';
   @ViewChild("x",{static : true}) xx : ElementRef;
 
+  images : string[] = ["POHA","IDLI","TEA","MBUN"];
+
+  condition : boolean = true;
+
   constructor(){
     console.log("App Component Object Created...!");
   }

@@ -1,0 +1,39 @@
+
+
+
+	Online Store 
+
+	
+		product.model.ts
+			id
+			code
+			name
+			qty
+			unitPrice
+
+	Manage Products	Component
+
+		products : Product[] = [];
+
+
+		ngOnInit() {
+			let product1=new Product(1,"POHA","Indori Poha",20,25);
+			let product2=new Product(2,"MBUN","Bun Muska",50,10);
+
+
+			this.products.push(product1);
+			this.products.push(product2);	
+		}
+		5 textbox - must not be empty	
+
+		Add Product / 
+		
+		List Of Products - Grid
+
+	dashboard component :
+
+		images
+		price
+		AddToCart
+
+

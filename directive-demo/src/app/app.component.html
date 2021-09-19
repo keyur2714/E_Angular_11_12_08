@@ -1,19 +1,35 @@
 <div class="container">
+
+  <div class="row m-1">
+    <div class="col" *ngFor="let img of images">
+      <img src="../assets/{{img}}.jpg" width="100px" height="100px">
+    </div>
+  </div>
+
   <div class="row m-1" #x>
     <div class="col">
       <p app-color>{{title}}</p>
     </div>    
   </div>
 
-  <div class="row m-1">
+  <div class="row m-1" *appMyIf="condition">
     <div class="col">
       <h1 app-color>Hello Radhe Krishna...!</h1>
     </div>
   </div>
 
-  <div class="row m-1">
+  <div class="row m-1"> 
     <div class="col">
       <input type="text" name=str app-color [border]="border" color="white" back-color="black">
     </div>
   </div>
+
+  <div class="row m-1" *appMyLoop="15;start:5">
+    <div class="col">
+      Hello World...!
+    </div>
+  </div>
+
+  
+
 </div>
