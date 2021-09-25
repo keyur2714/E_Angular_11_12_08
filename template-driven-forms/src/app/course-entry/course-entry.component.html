@@ -1,0 +1,41 @@
+<form #frm=ngForm (ngSubmit)="save(frm)">
+    <div class="row m-1">
+        <div class="col-sm-4">
+            Course Code :
+        </div>
+        <div class="col-sm-4">
+            <input type="text" class="form-control" name=courseCode ngModel required #courseCode=ngModel minlength="3" > 
+        </div>
+        <div class="col-sm-4" *ngIf="courseCode.invalid && courseCode.touched">
+            <span *ngIf="courseCode.errors['required']">Course Code is Mandatory Field.</span>
+            <span *ngIf="courseCode.errors['minlength']">Course Code Min 3 char.</span>
+        </div>
+    </div>
+    <div class="row m-1">
+        <div class="col-sm-4">
+            Course Name :
+        </div>
+        <div class="col-sm-4">
+            <input type="text" class="form-control" name=courseName ngModel required #courseName=ngModel > 
+        </div>        
+        <div class="col-sm-4" *ngIf="courseName.invalid && courseName.touched">
+            Course Name is Mandatory Field.
+        </div>
+    </div>
+    <div class="row m-1">
+        <div class="col-sm-4">
+            Fees :
+        </div>
+        <div class="col-sm-4">
+            <input type="text" class="form-control" name=fees ngModel required #fees=ngModel> 
+        </div>
+        <div class="col-sm-4" *ngIf="fees.invalid && fees.touched">
+            Fees is Mandatory Field.
+        </div>
+    </div>
+    <div class="row m-1">        
+        <div class="col">
+            <button class="btn btn-success" >Save</button>
+        </div>
+    </div>
+</form>
