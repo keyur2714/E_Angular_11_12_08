@@ -1,0 +1,106 @@
+<form #empForm=ngForm (ngSubmit)="save(empForm)">
+    <div class="row m-1">
+        <div class="col-sm-4">
+            Employee Id : 
+        </div>
+        <div class="col-sm-4">
+            <input type="text" name=id class="form-control" required [(ngModel)]="newEmployee.id" #id=ngModel>
+        </div>
+        <div class="col-sm-4" *ngIf="id.touched && id.invalid">
+            Id is Mandatory Field.
+        </div>
+    </div>
+    <div class="row m-1">
+        <div class="col-sm-4">
+            Employee Name : 
+        </div>
+        <div class="col-sm-4">
+            <input type="text" name=name class="form-control" required minlength="3" [(ngModel)]="newEmployee.name" #name=ngModel>
+        </div>
+        <div class="col-sm-4" *ngIf="name.touched && name.invalid">
+            <span *ngIf="name.errors['required']">Name is Mandatory Field.</span>
+            <span *ngIf="name.errors['minlength']">Name is Min 3 Character.</span>
+        </div>
+    </div>
+    <div class="row m-1">
+        <div class="col-sm-4">
+            Designation : 
+        </div>
+        <div class="col-sm-4">
+            <input type="text" name=designation class="form-control" [(ngModel)]="newEmployee.designation" >
+        </div>        
+    </div>
+    <div class="row m-1">
+        <div class="col-sm-4">
+            Salary : 
+        </div>
+        <div class="col-sm-4">
+            <input type="text" name=salary class="form-control" [(ngModel)]="newEmployee.salary" required pattern="^[0-9]+$" #salary=ngModel>
+        </div>
+        <div class="col-sm-4" *ngIf="salary.touched && salary.invalid">
+            <span *ngIf="salary.errors['required']">Salary is Mandatory Field.</span>
+            <span *ngIf="salary.errors['pattern']">Salary Must be in Numeric.</span>
+        </div>
+    </div>
+    <div class="row m-1">
+        <div class="col-sm-4">
+            City : 
+        </div>
+        <div class="col-sm-4">
+            <input type="text" name=city class="form-control" required [(ngModel)]="newEmployee.city" #city=ngModel>
+        </div>
+        <div class="col-sm-4" *ngIf="city.touched && city.invalid">
+            City is Mandatory Field.        
+        </div>    
+    </div>
+    <div class="row m-1">
+        <div class="col-sm-4">
+            Email : 
+        </div>
+        <div class="col-sm-4">
+            <input type="text" name=email class="form-control" required email [(ngModel)]="newEmployee.email" #email=ngModel>
+        </div>
+        <div class="col-sm-4" *ngIf="email.touched && email.invalid">
+            <span *ngIf="email.errors['required']">Email is Mandatory Field.</span>
+            <span *ngIf="email.errors['email']">Invalid Email Address.</span>            
+        </div>
+    </div>
+    <div class="row m-1">
+        <div class="col-sm-4">
+            Mobile No : 
+        </div>
+        <div class="col-sm-4">
+            <input type="text" name=mobileNo class="form-control" required minlength="10" maxlength="10" pattern="^[0-9]+$" [(ngModel)]="newEmployee.mobileNo" #mobileNo=ngModel>
+        </div>
+        <div class="col-sm-4" *ngIf="mobileNo.touched && mobileNo.invalid">
+            <span *ngIf="mobileNo.errors['required']">Mobile Number is Mandatory Field.</span>
+            <span *ngIf="mobileNo.errors['minlength']">Mobile Number must be 10 Digit.</span>
+            <span *ngIf="mobileNo.errors['pattern']">Mobile Number must be in Digit.</span>
+        </div>
+    </div>
+    <div class="row m-1">
+        <div class="col-sm-4">
+            Department : 
+        </div>
+        <div class="col-sm-4">
+            <select name="department" [(ngModel)]="newEmployee.dept" class="form-control">
+                <option value="-1">-:Select Department:-</option>
+                <option *ngFor="let dept of deptList" [ngValue]="dept">{{dept.deptName}}</option>
+            </select>
+        </div>
+    </div>
+    <div class="row m-1">
+        <div class="col-sm-4">
+            Gender : 
+        </div>
+        <div class="col-sm-4">
+            <input type="radio" name=gender class="radio-inline" value="M" [(ngModel)]="newEmployee.gender">Male
+            <input type="radio" name=gender class="radio-inline" value="F" [(ngModel)]="newEmployee.gender">Female
+        </div>
+    </div>
+    <div class="row m-1">
+        <div class="col">
+            <button class="btn btn-info" [disabled]="empForm.invalid">Save</button>
+        </div>
+    </div>
+</form>
