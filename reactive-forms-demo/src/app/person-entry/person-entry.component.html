@@ -1,0 +1,68 @@
+<div class="card">
+    <div class="card-header bg-dark text-info">
+        Person Entry
+    </div>
+    <div class="card-body">
+        <form [formGroup]="personForm" (ngSubmit)="save()">
+            <div class="row m-1">
+                <div class="col-sm-4"><sup>*</sup>Name : </div>
+                <div class="col-sm-4">
+                    <input type="text" formControlName="name" class="form-control">
+                </div>
+                <div class="col-sm-4" *ngIf="personForm.get('name').invalid && personForm.get('name').touched">
+                    Name is Mandatory field.        
+                </div>
+            </div>
+            <div class="row m-1">
+                <div class="col-sm-4"><sup>*</sup>Age : </div>
+                <div class="col-sm-4">
+                    <input type="text" formControlName="age" class="form-control">
+                </div>
+                <div class="col-sm-4" *ngIf="personForm.get('age').invalid && personForm.get('age').touched">
+                    <span *ngIf="personForm.get('age').errors['required']">Age is mandatory field.</span>
+                    <span *ngIf="personForm.get('age').errors['pattern']">Age is numeric value.</span>        
+                </div>
+            </div>
+            <div class="row m-1">
+                <div class="col-sm-4">Gender : </div>
+                <div class="col-sm-4">
+                    <input type="radio" formControlName="gender" value="M">Male
+                    <input type="radio" formControlName="gender" value="F">FeMale
+                </div>
+            </div>
+            <div class="row m-1">
+                <div class="col-sm-4"><sup>*</sup>Mobile No : </div>
+                <div class="col-sm-4">
+                    <input type="text" formControlName="mobileNo" class="form-control">
+                </div>
+                <div class="col-sm-4" *ngIf="personForm.get('mobileNo').invalid && personForm.get('mobileNo').touched">
+                    <span *ngIf="personForm.get('mobileNo').errors['required']">MobileNo is mandatory field.</span>
+                    <span *ngIf="personForm.get('mobileNo').errors['pattern']">MobileNo is numeric value.</span>        
+                </div>
+            </div>
+            <div class="row m-1">
+                <div class="col-sm-4"><sup>*</sup>Email : </div>
+                <div class="col-sm-4">
+                    <input type="text" formControlName="email" class="form-control">
+                </div>
+                <div class="col-sm-4" *ngIf="personForm.get('email').invalid && personForm.get('email').touched">
+                    <span *ngIf="personForm.get('email').errors['required']">Email is mandatory field.</span>
+                    <span *ngIf="personForm.get('email').errors['email']">invalid email address.</span>        
+                </div>
+            </div>
+            <div formArrayName="hobbies">
+                <div class="row m-1" *ngFor="let control of personForm.get('hobbies')['controls'];let i=index">
+                    <div class="col-sm-4">Hobby {{i+1}}: </div>
+                    <div class="col-sm-4"><input type="text" class="form-control" [formControlName]="i"></div>
+                    <div class="col-sm-4"><button (click)="addNew()" class="btn btn-info">Add More</button></div>
+                </div>    
+            </div>
+            <div class="row m-1">
+                <div class="col-sm-4">
+                    <button class="btn btn-success m-1">Save</button>
+                    <button type="button" class="btn btn-default m-1" (click)="reset()">Reset</button>
+                </div>                
+            </div>
+        </form>        
+    </div>
+</div>
