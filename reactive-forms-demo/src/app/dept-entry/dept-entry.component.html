@@ -1,0 +1,65 @@
+<form [formGroup]="deptForm" (ngSubmit)="save()">
+    <div class="row m-1">
+        <div class="col-sm-4">
+            Dept Id : 
+        </div>
+        <div class="col-sm-4">
+            <input type="text" class="form-control" formControlName="deptId">
+        </div>        
+    </div>
+    <div class="row m-1">
+        <div class="col-sm-4">
+            Dept Name : 
+        </div>
+        <div class="col-sm-4">
+            <input type="text" class="form-control" formControlName="deptName">
+        </div>        
+    </div>
+    <div formArrayName="employees">
+        <div *ngFor="let empGroup of deptForm.get('employees')['controls'];let i=index" [formGroupName]="i" class="card bg-dark text-warning" >                                                
+            <div class="card-header">Employees</div>
+            <div class="card-body">
+                <div class="row m-1">
+                    <div class="col-sm-4">
+                        Employee Id :
+                    </div>     
+                    <div class="col-sm-4">
+                        <input type="text" class="form-control" formControlName="empId">
+                    </div>
+                </div>            
+                <div class="row m-1">
+                    <div class="col-sm-4">
+                        Employee Name :
+                    </div>     
+                    <div class="col-sm-4">
+                        <input type="text" class="form-control" formControlName="name">
+                    </div>
+                </div>            
+                <div class="row m-1">
+                    <div class="col-sm-4">
+                        Salary :
+                    </div>     
+                    <div class="col-sm-4">
+                        <input type="text" class="form-control" formControlName="salary">
+                    </div>
+                </div>            
+                <div class="row m-1">
+                    <div class="col-sm-4">
+                        Designation :
+                    </div>     
+                    <div class="col-sm-4">
+                        <input type="text" class="form-control" formControlName="designation">
+                    </div>
+                </div>            
+            </div>
+        </div>
+        <div>
+            <button type="button" class="btn btn-info" (click)="addNewEmployee()">Add More</button>
+        </div>
+    </div>
+    <div class="row m-1">
+        <div class="col">
+            <button class="btn btn-info">Save</button>
+        </div>
+    </div>
+</form>

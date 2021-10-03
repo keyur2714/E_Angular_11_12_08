@@ -1,0 +1,25 @@
+{
+	"employees" : [
+		{
+			"id":1,
+			"name":"Keyur",
+			"city":"Pune",
+			"salary":11111,
+			"designation":"Software Engineer"	
+		},
+		{
+			"id":2,
+			"name":"Denish",
+			"city":"Surat",
+			"salary":11112,
+			"designation":"Software Engineer"	
+		},
+		{
+			"id":3,
+			"name":"Vinit",
+			"city":"Bardoli",
+			"salary":21111,
+			"designation":"Sales Manager"	
+		}
+	]
+}
