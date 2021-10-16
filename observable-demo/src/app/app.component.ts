@@ -24,6 +24,7 @@ export class AppComponent implements OnInit{
   //   }, 1000);
   // });
 
+  //Angular Framework will create demoService Object with DI
   constructor(private demoService : DemoService){}
 
   ngOnInit() {

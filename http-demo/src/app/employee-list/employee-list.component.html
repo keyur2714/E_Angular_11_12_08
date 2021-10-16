@@ -1,0 +1,33 @@
+<div class="card">
+    <div class="card-header bg-dark text-info">
+        Manage Employees
+    </div>
+    <div class="card-body">
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Employee #</th>
+                    <th>Name</th>
+                    <th>City</th>
+                    <th>Salary</th>
+                    <th>Designation</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let emp of employeeList">
+                    <td>{{emp.id}}</td>
+                    <td>{{emp.name}}</td>
+                    <td>{{emp.city}}</td>
+                    <td>{{emp.salary}}</td>
+                    <td>{{emp.designation}}</td>
+                    <td><button class="btn btn-info" (click)="getEmployeeDetail(emp.id)">Detail</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<div>
+    Selected Employee is : {{employee.name}}
+</div>
