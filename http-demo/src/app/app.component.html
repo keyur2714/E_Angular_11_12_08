@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container-fluid">
   <div class="row m-1">
     <div class="col">#
       <h1>Http Service Demo</h1>
@@ -6,7 +6,18 @@
   </div>
   <div class="row m-1">
     <div class="col">
-      <app-employee-list></app-employee-list>
+      <app-employee-entry
+        (refreshList)="isRefresh($event)"
+      >        
+      </app-employee-entry>
+    </div>
+  </div>
+  <div class="row m-1">
+    <div class="col">
+      <app-employee-list
+        (editId)="getEditId($event)"
+      >        
+      </app-employee-list>
     </div>
   </div>
 </div>

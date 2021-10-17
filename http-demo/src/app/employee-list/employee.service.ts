@@ -21,4 +21,8 @@ export class EmployeeService {
   getEmployeeById(id : number) : Observable<Employee> {
     return this.httpClient.get<Employee>(this.serverURL+"/employees/"+id);
   }
+
+  saveEmployee(employee : Employee) : Observable<Employee> {
+    return this.httpClient.post<Employee>(this.serverURL+"/employees",employee);
+  }
 }

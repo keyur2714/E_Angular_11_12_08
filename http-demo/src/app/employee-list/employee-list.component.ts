@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnChanges, OnInit, Output } from '@angular/core';
 import { Employee } from './employee.model';
 import { EmployeeService } from './employee.service';
 
@@ -8,16 +8,19 @@ import { EmployeeService } from './employee.service';
   styleUrls: ['./employee-list.component.css']
 })
 export class EmployeeListComponent implements OnInit {
-
+  
+  
   employeeList : Employee[] = [];
 
   employee : Employee = new Employee();
 
+  @Output() editId : EventEmitter<number> = new EventEmitter<number>();
+
   constructor(private employeeService : EmployeeService) { }
 
-  ngOnInit(): void {
+  ngOnInit(): void {    
     this.getEmployeeList();
-  }
+  }  
 
   getEmployeeList() : void {
     this.employeeService.getAllEmployees().subscribe(
@@ -28,6 +31,17 @@ export class EmployeeListComponent implements OnInit {
         console.log("Error : "+error);
       }
     )
+  }
+
+  edit(id : number) : void {
+    //alert(id);
+    if(id > 0) {
+      this.editId.emit(id);
+    }
+  }
+
+  delete(id : number) : void {
+    alert(id);
   }
 
   getEmployeeDetail(empId : number) : void {

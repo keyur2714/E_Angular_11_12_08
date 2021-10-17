@@ -1,0 +1,42 @@
+<form [formGroup]="employeeEntryForm" (ngSubmit)="save()">
+    <div class="row m-1">
+        <div class="col-sm-4"><sup>*</sup>Emp Id : </div>
+        <div class="col"><input type="text" name=id class="form-control" formControlName="id"></div>
+        <div class="col-sm-4" *ngIf="employeeEntryForm.get('id').invalid && employeeEntryForm.get('id').touched">
+            Id is Mandatory Field.
+        </div>
+    </div>
+    <div class="row m-1">
+        <div class="col-sm-4"><sup>*</sup>Emp Name : </div>
+        <div class="col"><input type="text" name=name class="form-control" formControlName="name"></div>
+        <div class="col-sm-4" *ngIf="employeeEntryForm.get('name').invalid && employeeEntryForm.get('name').touched">
+            Name is Mandatory Field.
+        </div>
+    </div>
+    <div class="row m-1">
+        <div class="col-sm-4"><sup>*</sup>City : </div>
+        <div class="col"><input type="text" name=city class="form-control" formControlName="city"></div>
+        <div class="col-sm-4" *ngIf="employeeEntryForm.get('city').invalid && employeeEntryForm.get('city').touched">
+            City is Mandatory Field.
+        </div>
+    </div>
+    <div class="row m-1">
+        <div class="col-sm-4"><sup>*</sup>Salary : </div>
+        <div class="col"><input type="text" name=salary class="form-control" formControlName="salary"></div>
+        <div class="col-sm-4" *ngIf="employeeEntryForm.get('salary').invalid && employeeEntryForm.get('salary').touched">
+            Salary is Mandatory Field.
+        </div>
+    </div>
+    <div class="row m-1">
+        <div class="col-sm-4"><sup>*</sup>Designation : </div>
+        <div class="col"><input type="text" name=designation class="form-control" formControlName="designation"></div>
+        <div class="col-sm-4" *ngIf="employeeEntryForm.get('designation').invalid && employeeEntryForm.get('designation').touched">
+            Designation is Mandatory Field.
+        </div>
+    </div>
+    <div class="row m-1">
+        <div class="col-sm-4">
+            <button class="btn btn-info" [disabled]="employeeEntryForm.invalid">Save</button>
+        </div>        
+    </div>
+</form>

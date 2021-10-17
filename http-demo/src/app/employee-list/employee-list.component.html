@@ -21,7 +21,10 @@
                     <td>{{emp.city}}</td>
                     <td>{{emp.salary}}</td>
                     <td>{{emp.designation}}</td>
-                    <td><button class="btn btn-info" (click)="getEmployeeDetail(emp.id)">Detail</button></td>
+                    <td>
+                        <button class="btn btn-success m-1" (click)="edit(emp.id)">Edit</button>
+                        <button class="btn btn-danger m-1" (click)="delete(emp.id)">Delete</button>
+                    </td>                    
                 </tr>
             </tbody>
         </table>
