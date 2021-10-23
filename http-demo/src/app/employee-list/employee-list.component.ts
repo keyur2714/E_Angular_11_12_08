@@ -41,7 +41,17 @@ export class EmployeeListComponent implements OnInit {
   }
 
   delete(id : number) : void {
-    alert(id);
+    //alert(id);
+    let confirmMsg = confirm("Are you sure want to delete Employee with Id : "+id +"?");
+    //alert(confirmMsg);
+    if(confirmMsg){
+      this.employeeService.deleteEmployeeById(id).subscribe(
+        (data)=>{
+          alert("Employee Deleted Successfully with id : "+id);
+          this.getEmployeeList();
+        }
+      )
+    }    
   }
 
   getEmployeeDetail(empId : number) : void {

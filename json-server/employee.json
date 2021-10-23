@@ -52,17 +52,10 @@
       "designation": "sales manager"
     },
     {
-      "id": "6",
-      "name": "dharmesh",
-      "city": "navsari",
-      "salary": "25000",
-      "designation": "marketing"
-    },
-    {
       "id": "7",
       "name": "Ami",
       "city": "pune",
-      "salary": "50000",
+      "salary": "70000",
       "designation": "Manager"
     },
     {

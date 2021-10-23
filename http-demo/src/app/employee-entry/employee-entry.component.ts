@@ -9,7 +9,7 @@ import { EmployeeService } from '../employee-list/employee.service';
 })
 export class EmployeeEntryComponent implements OnInit {
 
-  id : number = 0;
+  id : number = 0;  
 
   employeeEntryForm : FormGroup;  
 
@@ -20,13 +20,23 @@ export class EmployeeEntryComponent implements OnInit {
   constructor(private fb : FormBuilder,private employeeService : EmployeeService) { }
 
   ngOnInit(): void {
-    alert(this.id);
-    this.createEmployeeForm(this.id);
+    //alert(this.id);
+    if(this.id !== 0){
+      this.employeeService.getEmployeeById(this.id).subscribe(
+        (data)=>{
+          console.log(data);
+          this.employeeEntryForm.setValue(data);
+        }
+      )
+    }else{
+      this.createEmployeeForm();
+    }
+    
   }
 
-  createEmployeeForm(id : number) : void {
+  createEmployeeForm() : void {
     this.employeeEntryForm = this.fb.group({
-      id : [id,Validators.required],
+      id : [0,Validators.required],
       name : ['',Validators.required],
       city : ['',Validators.required],
       salary : [0,Validators.required],
@@ -37,15 +47,29 @@ export class EmployeeEntryComponent implements OnInit {
   save() : void {
     if(this.employeeEntryForm.valid){
       this.employee = this.employeeEntryForm.value;  
-      this.employeeService.saveEmployee(this.employee).subscribe(
-        (data : Employee)=>{
-          alert("Employee Saved Successfully with id : "+data.id);
-          this.refreshList.emit(true);
-        },
-        (error)=>{
-          console.log(error);
-        }
-      )
+      if(this.id === 0){
+        this.employeeService.saveEmployee(this.employee).subscribe(
+          (data : Employee)=>{
+            alert("Employee Saved Successfully with id : "+data.id);
+            this.refreshList.emit(true);
+          },
+          (error)=>{
+            console.log(error);
+          }
+        )
+      }else{
+        this.employeeService.updateEmployee(this.employee).subscribe(
+          (data : Employee)=>{
+            alert("Employee Updated Successfully with id : "+data.id);
+            this.refreshList.emit(true);
+            this.id = 0;
+            this.employeeEntryForm.setValue({"id":0,"name":'',"city":'',"salary":0,"designation":''})
+          },
+          (error)=>{
+            console.log(error);
+          }
+        )
+      }      
     }
   }
 

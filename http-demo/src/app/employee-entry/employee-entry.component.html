@@ -36,7 +36,8 @@
     </div>
     <div class="row m-1">
         <div class="col-sm-4">
-            <button class="btn btn-info" [disabled]="employeeEntryForm.invalid">Save</button>
+            <button class="btn btn-info" [disabled]="employeeEntryForm.invalid" *ngIf="id === 0">Save</button>
+            <button class="btn btn-info" [disabled]="employeeEntryForm.invalid" *ngIf="id !== 0">Update</button>
         </div>        
     </div>
 </form>
