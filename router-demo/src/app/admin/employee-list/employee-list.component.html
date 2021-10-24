@@ -1,0 +1,21 @@
+<table class="table table-bordered bg-dark text-info" >
+
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>City</th>
+            <th>Salary</th>
+            <th>Designation</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let employee of employeeList">
+            <td><a routerLink="/admin/employee-detail/{{employee.id}}">{{employee.id}}</a></td>
+            <td>{{employee.name}}</td>
+            <td>{{employee.city}}</td>
+            <td>{{employee.salary}}</td>
+            <td>{{employee.designation}}</td>
+        </tr>
+    </tbody>
+</table>
