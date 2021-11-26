@@ -1,0 +1,39 @@
+<div class="container">
+  <div class="row m-1">
+    <div class="col">
+      <h1>Pipes Demo</h1>
+    </div>
+  </div>
+  <div class="row m-1">
+    <div class="col">
+      <span class="alert alert-info">{{message | uppercase | lowercase}}</span>
+    </div>
+    <div class="col">
+      <span class="btn btn-success">Date of Birth : {{dateOfBirth | date : 'dd/MMM/yyyy hh:mm:ss a'}}</span>
+    </div>    
+  </div>
+  <div class="row m-1">
+    <div class="col">
+      Salary : {{salary | currency : 'EUR'}}
+    </div>
+    <div class="col">
+      Async Pipe : {{numObservable | async}}
+    </div>    
+  </div>
+  <div class="row m-1">
+    <div class="col">
+      {{name | welcome}}
+    </div>
+    <div class="col">
+      {{teacher | welcome }}
+    </div>
+  </div>
+  <div class="row m-1">
+    <div class="col">
+      Account No : {{accountNo | mask : '#' : 4}}
+    </div>
+    <div class="col">
+      Mobile No : {{mobileNo | mask : '*' : 3}}
+    </div>
+  </div>
+</div>
