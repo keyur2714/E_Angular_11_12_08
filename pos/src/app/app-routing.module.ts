@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { AdminComponent } from './admin/admin/admin.component';
 import { AuthGuardService } from './auth/auth-guard.service';
@@ -15,19 +15,14 @@ const routes: Routes = [
   {path : "home",component : HomeComponent},
   {path : "aboutus",component : AboutUsComponent},
   {path : "contact-us",component : ContactUsComponent},
-  {path : "login",component : LoginComponent},
-  {path : "admin",component : AdminComponent , canActivate : [AuthGuardService] ,
-    children : [
-      {path: 'product-list' , component : ProductListComponent},
-      {path: 'product-detail/:id' , component : ProductDetailComponent},
-    ]
-  },
+  {path : "login",component : LoginComponent},  
+  {path : "logout",component : LogoutComponent},
   {path : "products",component : UserComponent, canActivate : [AuthGuardService] },
-  {path : "logout",component : LogoutComponent}
+  {path : 'admin' , loadChildren : () => import('./admin/admin.module').then(n=>n.AdminModule)}
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes,{preloadingStrategy: PreloadAllModules})],
   exports: [RouterModule]
 })
 export class AppRoutingModule { 
