@@ -1,0 +1,52 @@
+
+
+	git clone https://github.com/keyur2714/E_Angular_11_2.git
+
+	cd E_Angular_11_2
+
+	git pull
+
+
+	npm install @capacitor/core @capacitor/cli --save
+
+	npx cap init
+
+	change angular.json outputDir to www 
+
+	ng build --prod
+
+	npx cap add android
+
+	npx cap copy android
+
+	npx cap open android
+android:usesCleartextTraffic="true"
+
+
+cordova-res android --skip-config --copy
+
+
+package com.webstack.tmsweb;
+
+
+import android.os.Bundle;
+
+
+import com.getcapacitor.BridgeActivity;
+
+import com.ionicframework.capacitor.Checkout;
+
+public class MainActivity extends BridgeActivity {
+  
+@Override
+  
+public void onCreate(Bundle savedInstanceState) {
+    
+super.onCreate(savedInstanceState);
+
+    
+registerPlugin(Checkout.class);
+  
+}
+
+}

@@ -1,0 +1,6 @@
+{
+	"appId": "com.webstack.didemo",
+	"appName": "didemo",
+	"webDir": "www",
+	"bundledWebRuntime": false
+}

@@ -3,7 +3,10 @@ The application module i.e.
  But the feature modules can be loaded either eagerly or lazily or preloaded. 
 
 Eager loading: To load a feature module eagerly we need to import it into application module using 
-imports metadata of @NgModule decorator. Eager loading is useful in small size applications. In eager loading, all the feature modules will be loaded before the application starts. Hence the subsequent request to the application will be faster.
+imports metadata of @NgModule decorator. 
+Eager loading is useful in small size applications. 
+In eager loading, all the feature modules will be loaded before the application starts. 
+Hence the subsequent request to the application will be faster.
 
 Lazy loading: To load a feature module lazily we need to load it using loadChildren 
 property in route configuration and that feature module must not be imported in application module. 
