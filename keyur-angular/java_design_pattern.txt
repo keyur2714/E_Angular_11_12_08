@@ -1,0 +1,62 @@
+Java Design Pattern
+
+1. Creational Design Patterns - 4 Hrs
+
+- Builder  
+- Prototype
+- Factory
+- AbstractFactory
+- Singleton
+
+
+2. Structural Design Patterns - 6 Hrs
+
+- Adapter
+- Bridge
+- Composite
+- Decorator
+- Facade
+- Flyweight
+- Proxy
+
+3. Behavioral Design Patterns - 8 Hrs
+
+- Chain of Responsibility
+- Command
+- Interpreter
+- Iterator
+- Medoiator
+- Memento
+- Observer
+- State
+- Strategy
+- Template Method
+- Visitor
+
+4. Other Design Patterns - 2 Hrs
+
+- DAO
+- MVC
+- Dependency Injection
+
+5. Searching Algorithms - 4 Hrs
+
+Sequential Search:
+	- Linear Searching
+Interval Search:
+	- Binary Searching
+- Interpolation Search
+	
+6. Sorting Algorithms - 6 Hrs
+
+- Selection Sorting
+- Bubble Sorting
+- Insertion Sorting
+- Merge Sorting
+- Quick Sorting
+- Shell Sorting
+- Heap Sorting
+
+Total - 4 + 6 + 8 + 2 + 4 + 6 = 30 Hrs
+
+Fees : 30*330 = 9900/- Rs

@@ -1,0 +1,31 @@
+
+	
+	
+		MEAN Stack
+		
+		- MongoDB / MySQL - Database Layer
+		- Express - Middle Layer
+		- Angular - Front End
+		- Node JS - Server Side Java script Framework
+	
+	
+	---------
+		MySQL - - product_detail
+		
+		Express -- server.js --------3030
+	
+		Angular -- FrontEnd --------4200
+		 ------Product List ---
+			|
+			productService
+			|
+			call http://localhost:3000/api/productList
+		
+		Node JS
+			-- API 
+			http://localhost:3000/api/productList
+			|
+			Connect Database	
+		
+		
+		localhost:3030	

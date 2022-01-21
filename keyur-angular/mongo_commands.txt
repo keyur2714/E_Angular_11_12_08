@@ -1,0 +1,15 @@
+use ems
+
+show dbs
+
+db.student.insert({"name":"keyur"})
+db.student.find()
+
+use ems
+db.dropDatabase()
+
+db.student.update(
+{"id" : 2},
+{$set: { "name" : "Ami","city":"Bharuch"}});
+
+db.student.remove({'name':'hiren'});

@@ -1,0 +1,184 @@
+Angular Version 9 - (will start from Angular 2 / 4 / ... / 9)
+
+Why Learn Anglar ?
+
+- if you're planning to learn Angular in 2020, go for it! You will have far more opportunities in development 
+compared to any other frontend framework. 
+Plus, you will find job opportunities in frontend development as a lot of tech companies hire frontend developers 
+from here based on the projects they do here.
+
+What is SPA (Single Page Application)?
+- Angular supports Single Page Applications (SPAs): 
+- Angular supports the development of SPAs which present better user experience 
+as it reduces the wait time for reloading of the full webpage significantly.
+
+For All Batches Projects are not same but some common Projects we do during course are below.
+
+1. Order Management System.
+2. Institute Management System.
+3. Shoppping Cart Applications.
+And Many More also based on Student intrest we can desid
+	
+
+High level Topics.
+1. Introductin
+2. Component & Data Binding
+3. Component Communications
+4. Directive
+5. Forms 
+6. Services & Dependency Injections
+7. HttpClient Module
+8. Observables & RX Js Operators
+9. Router
+10. Authentication & Authorizations (Route Guards)
+11.Pipes 
+12.Deployments.
+13.Animations.
+14.Uni Testing. 	
+	
+
+Detail Syllabus.
+	
+	
+Chapter 1.
+	1. Setup / Installation
+		- Node JS.
+		- Angular CLI.
+		- Visual Studio Code.
+	2. Git Repository / Basic Git Commands 
+	3. CLI Basic Commands 
+	4. First Demo Application  
+	5. Add bootstrap in demo application 
+	6. basic idea of bootstrap 
+	7. Flow of Execution with angular.json 
+	8. create component 
+	9. play with component 
+	10. inbuilt dirctive / ngIf / ngFor / ngClass
+	11. create component without html
+	12. create model class 
+	13. create Array of string/numbers
+	14. create Array of Objects
+	15. simple application of CRUD with in memory/array 
+	16. Data Binding
+			- one way 
+			- two way
+Chapter 2.
+
+1. Component Communications Introductin 
+2. @Input() Decorator for Parent to child / property Communications 
+3. @Output() Decorator for Child to Parent / Events Communications
+4. @ViewChild() Decorator for Ref of Elements/coponent selectors
+5. Custom Directives
+		- Simple Directive 
+		- Attribute Directive 
+		- Structural Directive
+Chapter 3.		
+
+1. Forms - Introductin
+2. Template Driven Forms 
+   - Template Driven Forms with Validations
+3. Reactive  Forms
+   - Reactive Forms With Validations 
+4. Reactive Forms with FormBuilder API
+5. Custom Validations in Reactive Forms
+
+Chapter 4.
+
+1.Observables & RX JS Basic Operator
+		- interval() operator practical
+		- of() operator practical
+		- map() operator practical
+		- filter() operator practical
+		- catchError() operator practical
+		- Subscription() operator practical
+		- tap() operator practical
+		- Pipe() operator practical
+		
+Chapter 5.
+
+1. DI (Dependency Injection) & Services
+2. Why Dependency Injection.
+3. How To Create Services
+4. @Injectable() Decorator 
+
+Chapter 6.
+
+1. JSON Server - for create dummy web services - 
+2. How to use POST MAN Tool for Test REST Web Services
+3. Http Client Module 
+		- Get
+		- Post
+		- Put
+		- Delete
+4. CRUD Operations with HttpClientModule and HttpClient Class.
+5. use Observables with Services.
+6. Interceptor for Passing common header for all services. 
+
+Chapter 7.
+1. Router - Introductin
+2. Create Basic Project with Router Navigation
+3. Children Route
+4. Route Guards for Authorizations.
+
+Chapter 9.		
+1. Session Storage/Local Storage & Cookie Understanding - 
+	- Object Parsing.
+2. JWT Introductin
+	
+Chapter 10.	
+
+1. Custom Modules and it's communications -
+2. Lazy Loading / Eager Loading & Pre Loading  in Modules - 
+
+Chapter 11.
+
+1. Pipes - for Data Transform. it's like Filter
+2. Pure Vs ImPure Pipes
+3. Custom Pipe Implementations.
+
+Chapter 12. (Projects - Order Management Syatem) 
+
+0. use Bootstrap CSS for Design Projects
+1. Apply Navigation with Router
+2. Create Login / Logout in Application
+3. Create Authentication Services
+4. Create Authorizations Guard Services
+5. Admin And User Based Authentication
+6. Manage Orders with CRUD operations.
+7. Place Order By User.
+8. Generate Bill. 
+
+Chapter 13. (Advance)
+
+1. Angular Material Inroduction
+2. setup	
+3. Create Entry Forms 
+4. Create DATA Table 
+5. Imlement CRUD Operations.
+
+Chapter 14.
+
+1. Animations - Introductin		
+2 custom Animations Implementations
+3. component Animations
+
+Chapter 15. 
+1. Unit Testing Introductin
+2. Jasmin Basics
+3. Karma Basics
+4. Simple Examples with Unit Testcases.
+
+Chapter 16. 
+
+1. Deployments. Inroduction
+2. Project Created in Chapter 12 Deployments on Web Server.
+3. Tomcat Web Server or Cloud Platform.
+		
+Bonus :
+
+1. All Chapter Code Examples accesible on GitHub.
+2. Interview Question List.
+3. you will get Help related to Technical difficulties even after complete course.
+
+
+			

@@ -1,0 +1,32 @@
+
+	Forms in Angular
+	
+	import FormsModule from '@angular/forms';
+	import ReactiveFormsModule from '@angular/forms';
+	
+	FormsModule -- package	
+	
+	1. Template Driven Forms
+		- FormsModule		
+	2. Reactive Forms
+		- ReactiveFormsModule
+
+	<form>
+		<input type=text name=aa>	<Add More>
+	</form>	
+
+	Gender
+		Male  	Female
+
+		[]
+
+	--New Development - 80% Reactive Forms
+
+	--Migration Project - 50%
+
+
+
+
+	
+	
+	

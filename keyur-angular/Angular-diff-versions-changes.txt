@@ -1,0 +1,69 @@
+Angular 2			Angular 4							Angular 5
+DI					Faster And Compact					Build Optimizer
+Decorators			Animation Support					Angular Universal and State Transfer
+Child Injectors		*nglf and *ngFor improvements		Compiler Improvements
+Instance Scopes		Angular Universal					TypeScript
+Dynamic Loading		Type Script 2.1 and 2.2				Preserve White Spaces
+Templating				–								Improved Decorators
+Directives				–								Internationalized Number, Date and Currency pipes
+Child Routers			-								Replaced ReflectiveInjector  with StaticInjector
+Guards					–								Zone Seed Improvements
+Design					–								exportAs
+Logging					–								HttpClient
+Scopes					–								AngularCli 1.5
+–						–								updateOn Blur / Submit
+–						–								Rxjs 5.5
+–						–								New Router Lifecycle
+
+
+Angular - 6
+
+Some Major updates in Angular 6
+
+Typescript 2.7.x supports
+Improved decorator error messages
+Fix platform-detection example for Universal
+Added to supports of Native-Element
+Added Optional generic type for ElementRef
+Updates on NgModelChange
+Add type and hooks to directive def
+Enable size tracking of a minimal CLI render3 application
+Add canonical view query
+<ng-template> now becomes <template>
+Long-term support(LTE) added to Angular from v4
+
+
+Angular 7
+
+Some Major updates in Angular 7
+
+Angular 7 now supporting to TypeScript 3.1
+Added a new ability to recover from malformed URLs
+Drag and drop
+Downloadable console for starting and running Angular projects on your local machine
+compiler-cli: update tsickle to 0.29.x
+
+Angular 8 
+
+
+Ivy Engine
+
+Ivy is a major part of this release, and it took most of the effort from Angular 6 to release it. Ivy is a new rendering engine that will produce smaller bundle sizes But it's not recommended to start using it in production not just yet. Know more about what is ivy?
+
+
+Lazy Loading
+
+Lazy loading is based on the concepts of Angular Routing and Angular 8 added support for dynamic EcmaScript imports in router configuration as it helps bring down the size of large files by lazily loading the files that are required.
+
+
+Major features included in Angular 8
+
+AngularJS API Migration Improvements with $location service
+Updated Typescript to 3.4.x
+@angular/platform-webworker and@angular/platform-webworker-dynamic both the packages are deprecated
+ @angular/http removed from the list of packages
+ng-build, ng-test, and ng-run are equipped to be extended by 3rd-party libraries and tool.
+Angular router backward compatibility
+Dart-sass for Sass files
+ The ViewChild and ContentChild decorators now must have a new option called static.
+Export defaultKeyValueDiffers to private API 
